@@ -112,13 +112,14 @@
     }
 
     .parallax2 {
-      background-image: url("plants.jpeg");
+      background-image: url("tori.jpg");
       min-height: 100%;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      filter: brightness(0.9) saturate(80%) contrast(100%) blur(8px);
+      /* filter: brightness(0.9) saturate(80%) contrast(100%) blur(8px); */
+      filter: blur(2px);
     }
 
     .lines {
@@ -158,7 +159,7 @@
     }
 
     img.philosophy.active {
-      opacity: 0.25;
+      opacity: 0.20;
     }
 
     div.solid {
@@ -736,188 +737,195 @@
   </div>
   </div>
 
-  <section id="philosophy"
-    class="hidden text-slate-400 landscape:block relative divide-x-1 divide-y-1 divide-solid divide-indigo-900/50">
-    <div class="h-screen">
-      <div class="bg-gray-950/75 py-8 h-2/5">
-        <div class="absolute top-0 size-full -z-1">
-          <div class="parallax2"></div>
-        </div>
+  <div>
 
-        <img class="philosophy absolute top-0 text-8xl h-screen" src="light.png" width="100%" alt="" />
 
-        <p class="xl:mt-20 text-8xl mt-0 flex justify-center">📖</p>
-        <h2 class="xl:mt-10 text-4xl mt-5 font-bold text-slate-200 flex justify-center">
-          My Philosophy
-        </h2>
-        <p class="mt-3 flex justify-center">I always tryna write the cleanest code</p>
+    <div class="relative">
+      <div class="absolute top-0 size-full -z-1">
+        <div class="parallax2"></div>
       </div>
-      <div class="flex h-3/5">
-        <div class="bg-gray-950 hidden xl:w-3/20 xl:block"></div>
-        <div class="bg-gray-950 grid grid-cols-2 divide-x-1 divide-solid divide-indigo-900/50 w-full xl:w-14/20">
-          <div class="flex text-2xl xl:text-4xl justify-center items-end px-5 pb-0 text-slate-200 font-bold">
-            <h1>Clean Architecture</h1>
-          </div>
-          <div class="flex text-2xl xl:text-4xl justify-center items-end px-5 pb-0 text-slate-200 font-bold">
-            <h1>Solid Principles</h1>
-          </div>
-          <div class="flex justify-center content-center xl:text-2xl text-xl p-5">
-            📂 Source <br />
-            |__ 📂 Core <br />
-            |____ 📂 Application <br />
-            |____ 📂 Domain <br />
-            |__ 📂 Infrastructure <br />
-            |____ 📂 Identity <br />
-            |____ 📂 Persistence <br />
-            |____ 📂 Shared <br />
-            |__ 📂 Api <br />
-            |__ 📂 ...
-          </div>
+      <section id="philosophy" class="hidden text-slate-400 landscape:block relative ">
+        <div class="h-screen">
+          <div class="bg-gray-950/80 py-8 h-2/5">
+            <div class="absolute top-0 size-full -z-1">
+              <div class="parallax2"></div>
+            </div>
 
-          <div class="flex justify-center content-center p-5">
-            <div
-              class="text-2xl xl:text-3xl rounded-xl h-auto border grid grid-cols-1 divide-y-1 bg-neutral-600/25 px-5">
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">S</a>ingle
-                Responsability
+            <img class="philosophy absolute top-0 text-8xl h-screen" src="light.png" width="100%" alt="" />
+
+            <p class="md:mt-10 text-8xl mt-0 flex justify-center">📖</p>
+            <h2 class="xl:mt-10 text-4xl mt-5 font-bold text-slate-200 flex justify-center">
+              My Philosophy
+            </h2>
+            <p class="mt-3 flex justify-center">I always tryna write the cleanest code</p>
+          </div>
+          <div class="flex h-3/5">
+            <div class="bg-gray-950/70 hidden xl:w-3/20 xl:block"></div>
+            <div class="bg-gray-950/70 grid grid-cols-2 w-full xl:w-14/20">
+              <div
+                class="h-auto my-10 ml-10 mr-5 text-2xl xl:text-3xl rounded-xl h-auto border border-neutral-100/30 divide-y-1 divide-neutral-100/60 bg-neutral-600/25 px-5">
+                <div class="h-1/8 flex text-2xl justify-center items-end px-5 pb-0 text-slate-200 font-bold">
+                  <h1>Clean Architecture</h1>
+                </div>
+                <div class="h-7/8 flex justify-center content-center xl:text-2xl text-xl p-5">
+                  📂 Source <br />
+                  |__ 📂 Core <br />
+                  |____ 📂 Application <br />
+                  |____ 📂 Domain <br />
+                  |__ 📂 Infrastructure <br />
+                  |____ 📂 Identity <br />
+                  |____ 📂 Persistence <br />
+                  |____ 📂 Shared <br />
+                  |__ 📂 Api <br />
+                  |__ 📂 ...
+                </div>
               </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">O</a>pen/Closed
-              </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">L</a>iskov
-                Substitution
-              </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">I</a>nterface
-                Segregation
-              </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">D</a>ependency
-                Inversion
+              <div
+                class="my-10 mr-10 ml-5 text-2xl xl:text-3xl rounded-xl h-auto border border-neutral-100/30 divide-y-1 divide-neutral-100/60 bg-neutral-600/25 px-5">
+                <div class="h-1/8 flex text-2xl justify-center items-end px-5 pb-0 text-slate-200 font-bold">
+                  <h1>Solid Principles</h1>
+                </div>
+
+                <div class="h-7/8 flex justify-center content-center p-5">
+                  <div class="text-2xl h-auto grid grid-cols-1 divide-y-1 px-5">
+                    <div class="flex items-center">
+                      <a
+                        class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">S</a>ingle
+                      Responsability
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">O</a>pen/Closed
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">L</a>iskov
+                      Substitution
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">I</a>nterface
+                      Segregation
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">D</a>ependency
+                      Inversion
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="bg-gray-950/70 hidden xl:w-3/20 xl:block"></div>
           </div>
         </div>
-        <div class="bg-gray-950 hidden xl:w-3/20 xl:block"></div>
-      </div>
-    </div>
-  </section>
-  <section id="philosophy"
-    class="hidden text-slate-400 portrait:block text-slate-200  relative divide-x-1 divide-y-1 divide-solid divide-indigo-900/50">
-    <div>
-      <div class="bg-gray-950/75 py-8">
-        <div class="absolute top-0 size-full -z-1">
-          <div class="parallax2"></div>
-        </div>
-
-        <img class="philosophy absolute top-0 text-8xl h-screen" src="light.png" width="100%" alt="" />
-
-        <p class="xl:mt-20 text-8xl mt-0 flex justify-center">📖</p>
-        <h2 class="xl:mt-10 text-4xl mt-5 font-bold text-slate-200 flex justify-center">
-          My Philosophy
-        </h2>
-        <p class="mt-3 flex justify-center">I always tryna write the cleanest code</p>
-      </div>
-      <div class="flex ">
-        <div class="bg-gray-950 hidden xl:w-3/20 xl:block"></div>
-        <div
-          class="bg-gray-950 grid grid-cols-1 divide-x-1 divide-y-1 divide-solid divide-indigo-900/50 w-full xl:w-14/20">
-          <div class="flex text-2xl xl:text-4xl items-end justify-center px-5 py-2 text-slate-200 ">
-            <h1>Clean Architecture</h1>
+      </section>
+      <section id="philosophy" class="hidden text-slate-400 portrait:block text-slate-200  relative ">
+        <div>
+          <div class="bg-gray-950/80 py-8">
+            <img class="philosophy absolute top-0 text-8xl h-screen" src="light.png" width="100%" alt="" />
+            <p class="xl:mt-20 text-8xl mt-0 flex justify-center">📖</p>
+            <h2 class="xl:mt-10 text-4xl mt-5 font-bold text-slate-200 flex justify-center">
+              My Philosophy
+            </h2>
+            <p class="mt-3 flex justify-center">I always tryna write the cleanest code</p>
           </div>
-
-          <div class="flex justify-center content-center xl:text-2xl text-xl p-5">
-            📂 Source <br />
-            |__ 📂 Core <br />
-            |____ 📂 Application <br />
-            |____ 📂 Domain <br />
-            |__ 📂 Infrastructure <br />
-            |____ 📂 Identity <br />
-            |____ 📂 Persistence <br />
-            |____ 📂 Shared <br />
-            |__ 📂 Api <br />
-            |__ 📂 ...
-          </div>
-          <div class="flex text-2xl xl:text-4xl items-end justify-center px-5 py-2 text-slate-200">
-            <h1>Solid Principles</h1>
-          </div>
-          <div class="flex justify-center content-center p-5">
+          <div class="flex ">
+            <div class="bg-gray-950 hidden xl:w-3/20 xl:block"></div>
             <div
-              class="text-2xl xl:text-3xl rounded-xl h-auto border grid grid-cols-1 divide-y-1 bg-neutral-600/25 px-5">
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">S</a>ingle
-                Responsability
+              class="bg-gray-950 grid grid-cols-1 divide-x-1 divide-y-1 divide-solid divide-indigo-900/50 w-full xl:w-14/20">
+              <div class="flex text-2xl xl:text-4xl items-end justify-center px-5 py-2 text-slate-200 ">
+                <h1>Clean Architecture</h1>
               </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">O</a>pen/Closed
+
+              <div class="flex justify-center content-center xl:text-2xl text-xl p-5">
+                📂 Source <br />
+                |__ 📂 Core <br />
+                |____ 📂 Application <br />
+                |____ 📂 Domain <br />
+                |__ 📂 Infrastructure <br />
+                |____ 📂 Identity <br />
+                |____ 📂 Persistence <br />
+                |____ 📂 Shared <br />
+                |__ 📂 Api <br />
+                |__ 📂 ...
               </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">L</a>iskov
-                Substitution
+              <div class="flex text-2xl xl:text-4xl items-end justify-center px-5 py-2 text-slate-200">
+                <h1>Solid Principles</h1>
               </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">I</a>nterface
-                Segregation
-              </div>
-              <div class="flex items-center">
-                <a
-                  class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">D</a>ependency
-                Inversion
+              <div class="flex justify-center content-center p-5">
+                <div
+                  class="text-2xl xl:text-3xl rounded-xl h-auto border grid grid-cols-1 divide-y-1 bg-neutral-600/25 px-5">
+                  <div class="flex items-center">
+                    <a
+                      class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">S</a>ingle
+                    Responsability
+                  </div>
+                  <div class="flex items-center">
+                    <a
+                      class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">O</a>pen/Closed
+                  </div>
+                  <div class="flex items-center">
+                    <a
+                      class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">L</a>iskov
+                    Substitution
+                  </div>
+                  <div class="flex items-center">
+                    <a
+                      class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">I</a>nterface
+                    Segregation
+                  </div>
+                  <div class="flex items-center">
+                    <a
+                      class="bg-gradient-to-r from-indigo-500 to-pink-600 bg-clip-text font-extrabold text-transparent">D</a>ependency
+                    Inversion
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="bg-gray-950 hidden xl:w-3/20 xl:block"></div>
           </div>
         </div>
-        <div class="bg-gray-950 hidden xl:w-3/20 xl:block"></div>
-      </div>
-    </div>
-  </section>
-  <div
-    class="bg-gray-950 h-[70vh] border-t border-indigo-900/50 flex items-center justify-center flex-col gap-15 xl:gap-30">
-    <div class="text-slate-200 flex justify-center font-bold">
-      <div class="sign">
-        <span>find me on...</span>
-      </div>
-    </div>
-    <div class="relative flex gap-4 justify-center font-bold">
-      <div class="absolute top-0 inset-[1%] block rounded-xl bg-blue-300/15 blur-2xl pointer-events-none select-none">
+      </section>
+      <div class="bg-gray-950/80 h-[40vh] flex items-center justify-center flex-col gap-10 xl:gap-30">
+        <div class="text-slate-200 flex justify-center font-bold">
+          <div class="sign">
+            <span>find me on...</span>
+          </div>
+        </div>
+        <div class="relative flex gap-4 justify-center font-bold">
+          <div
+            class="absolute top-0 inset-[1%] block rounded-xl bg-blue-300/15 blur-2xl pointer-events-none select-none">
+          </div>
+
+          <a class="p-1 bg-white/10 rounded-xl hover:bg-blue-200 hover:shadow-blue-400/50 hover:shadow-lg hover:inset-shadow-sm hover:inset-shadow-blue-400 transition duration-200"
+            href="https://www.linkedin.com/in/michael-akira-awa-vitug-7b61b2201/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 50 50">
+              <path
+                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+              </path>
+            </svg>
+          </a>
+          <a class="p-1 bg-white/10 rounded-xl hover:bg-blue-200 hover:shadow-blue-400/50 hover:shadow-lg hover:inset-shadow-sm hover:inset-shadow-blue-400 transition duration-200"
+            href="mailto:akiraki.awa@gmail.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 50 50">
+              <path
+                d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z">
+              </path>
+            </svg>
+          </a>
+          <a class="p-1 bg-white/10 rounded-xl hover:bg-blue-200 hover:shadow-blue-400/50 hover:shadow-lg hover:inset-shadow-sm hover:inset-shadow-blue-400 transition duration-200"
+            href="https://github.com/akirakii" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 30 30">
+              <path
+                d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
+              </path>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <a class="p-1 bg-white/10 rounded-xl hover:bg-blue-200 hover:shadow-blue-400/50 hover:shadow-lg hover:inset-shadow-sm hover:inset-shadow-blue-400 transition duration-200"
-        href="https://www.linkedin.com/in/michael-akira-awa-vitug-7b61b2201/" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 50 50">
-          <path
-            d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
-          </path>
-        </svg>
-      </a>
-      <a class="p-1 bg-white/10 rounded-xl hover:bg-blue-200 hover:shadow-blue-400/50 hover:shadow-lg hover:inset-shadow-sm hover:inset-shadow-blue-400 transition duration-200"
-        href="mailto:akiraki.awa@gmail.com" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 50 50">
-          <path
-            d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z">
-          </path>
-        </svg>
-      </a>
-      <a class="p-1 bg-white/10 rounded-xl hover:bg-blue-200 hover:shadow-blue-400/50 hover:shadow-lg hover:inset-shadow-sm hover:inset-shadow-blue-400 transition duration-200"
-        href="https://github.com/akirakii" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 30 30">
-          <path
-            d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
-          </path>
-        </svg>
-      </a>
     </div>
-  </div>
   </div>
   <script>
     function controlVideo(vidFunc, div) {
