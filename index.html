@@ -242,14 +242,16 @@
 <body>
   <div class="leading-relaxed text-slate-400 antialiased selection:bg-indigo-300 selection:text-indigo-900">
     <div class="flex divide-solid divide-indigo-900/50">
-      <div class="relative hidden w-8/20 landscape:md:block">
+      <div class="relative hidden w-1/2 landscape:md:block">
         <img class="sticky top-0 h-screen hidden sm:block md:hidden" src="me1.jpg" alt="me">
         <img class="sticky top-0 h-screen hidden md:block xl:hidden" src="me1.jpg" alt="me">
         <img class="sticky top-0 h-screen hidden xl:block 4xl:hidden" src="me1.jpg" alt="me">
         <img class="sticky top-0 h-screen hidden 4xl:block" src="me1.jpg" alt="me">
       </div>
       <div class="relative px-7 grid grid-cols-1 w-full hidden landscape:block landscape:md:w-12/20">
-        <div class="sticky top-[95vh] mb-4 bg-indigo-900 w-50 text-center flex justify-center items-center rounded-xl z-11 text-slate-200">scroll for more 👇</div>
+        <div
+          class="sticky top-[95vh] mb-4 bg-indigo-900 w-50 text-center flex justify-center items-center rounded-xl z-11 text-slate-200">
+          scroll for more 👇</div>
         <div class="flex items-center h-screen">
           <div>
             <h1 class="xl:text-5xl md:text-4xl text-slate-200 font-bold">
@@ -371,29 +373,31 @@
         </div>
 
 
-        <div class="h-screen pt-40">
-          <h2 class="text-4xl text-slate-200 font-bold">About Me</h2>
-          <p class="mt-3 mb-6 sm:w-4/5 xl:w-1/2 text-justify">
-            I have a bachelor’s degree in Software Engineering and three
-            years of experience as a Back-End Engineer at Tiendada. I’ve
-            been interested in programming since I was eight and am always
-            looking to improve my skills.
-          </p>
-          <div class="flex gap-4 w-1/2">
-            <a class="video-container" href="CV.pdf" target="_blank">
-              <img src="CV.png" alt="cv" />
-              <div class="overlay bg-slate-900/80">
-                <div class="text-center text-xl font-bold">
-                  Curriculum Vitae
+        <div class="h-screen flex items-center">
+          <div>
+            <h2 class="text-4xl text-slate-200 font-bold">About Me</h2>
+            <p class="mt-3 mb-6 sm:w-4/5 xl:w-1/2 text-justify">
+              I have a bachelor’s degree in Software Engineering and three
+              years of experience as a Back-End Engineer at Tiendada. I’ve
+              been interested in programming since I was eight and am always
+              looking to improve my skills.
+            </p>
+            <div class="flex gap-4 w-1/2">
+              <a class="video-container" href="CV.pdf" target="_blank">
+                <img src="CV.png" alt="cv" />
+                <div class="overlay bg-slate-900/80">
+                  <div class="text-center text-xl font-bold">
+                    Curriculum Vitae
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="video-container" href="Diploma.pdf" target="_blank">
-              <img src="Diploma.png" alt="diploma" />
-              <div class="overlay bg-slate-900/80">
-                <div class="text-center text-xl font-bold">Diploma</div>
-              </div>
-            </a>
+              </a>
+              <a class="video-container" href="Diploma.pdf" target="_blank">
+                <img src="Diploma.png" alt="diploma" />
+                <div class="overlay bg-slate-900/80">
+                  <div class="text-center text-xl font-bold">Diploma</div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -457,7 +461,6 @@
         </div>
 
       </div>
-      <div class="hidden landscape:md:block landscape:md:w-1/20 lines"></div>
     </div>
 
     <div class="hidden landscape:block relative divide-x-1 divide-y-1 divide-solid divide-indigo-900/50">
