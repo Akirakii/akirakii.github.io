@@ -1,0 +1,225 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(-45deg,
+            oklch(0.208 0.042 265.755),
+            oklch(0.19 0.05 278.12),
+            oklch(0.208 0.042 265.755),
+            oklch(0.19 0.05 278.12));
+    background-size: 350% 350%;
+    animation: gradient 7s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: "liga" 1, "calt" 1;
+    /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+.video-container {
+    position: relative;
+    /* width: 800px; */
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.video-container:hover {
+    transform: scale(1.02);
+}
+
+.vid {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.video-container:hover .overlay {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.parallax {
+    background-image: url("me.jpeg");
+    min-height: 200vh;
+    background-attachment: fixed;
+    background-position: -25% 0%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    filter: hue-rotate(15deg) brightness(0.9) saturate(80%) contrast(120%);
+
+    /* mask-image: linear-gradient(270deg, black 80%, transparent 100%) */
+}
+
+@media (min-width: 1250px) {
+    .parrallax {
+        background-position: -25% 0%;
+    }
+}
+
+.parallax2 {
+    background-image: url("tori.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: brightness(0.9) saturate(80%) contrast(100%) blur(8px); */
+    filter: blur(2px);
+}
+
+.lines {
+    background: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            oklch(0.359 0.144 278.697 / 0.2) 10px,
+            oklch(0.359 0.144 278.697 / 0.2) 20px);
+}
+
+.lines2 {
+    background: repeating-linear-gradient(225deg,
+            transparent,
+            transparent 10px,
+            oklch(0.359 0.144 278.697 / 0.2) 10px,
+            oklch(0.359 0.144 278.697 / 0.2) 20px);
+}
+
+nav a {
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: oklch(0.929 0.013 255.508);
+}
+
+nav a.active {
+    color: oklch(0.929 0.013 255.508);
+    font-weight: 700;
+}
+
+img.philosophy {
+    opacity: 0;
+    transition: 6s;
+    pointer-events: none;
+    user-select: none;
+}
+
+img.philosophy.active {
+    opacity: 0.20;
+}
+
+div.solid {
+    grid-template-columns: 5ch auto;
+}
+
+.sign {
+    font-family: "Vibur", cursive;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 3rem;
+        text-align: center;
+        line-height: 1;
+        color: #c6e2ff;
+        animation: neon 0.08s ease-in-out infinite alternate;
+    }
+}
+
+/*-- Animation Keyframes --*/
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+            0 0 30px rgba(202, 228, 225, 0.34),
+            0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92),
+            0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+    }
+
+    to {
+        text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+            0 0 30px rgba(202, 228, 225, 0.42),
+            0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84),
+            0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px rgba(30, 132, 242, 1);
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: var(--width);
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 108%;
+    left: 50%;
+    margin-left: calc(-1 / 2 * var(--width));
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.videos-container {
+    --color1: oklch(0.208 0.042 265.755);
+    --color2: oklch(0.22 0.04 266.25);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, var(--color2) 25%, transparent 25%, transparent 75%, var(--color2) 75%, var(--color2)),
+        linear-gradient(135deg, var(--color2) 25%, var(--color1) 25%, var(--color1) 75%, var(--color2) 75%, var(--color2));
+    background-size: 90px 90px;
+    background-position: 0 0, 135px 135px;
+}
